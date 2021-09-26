@@ -1,0 +1,21 @@
+@import "colors";
+@import "fonts";
+@import "mixins";
+
+@import "1header";
+@import "2display";
+@import "3pad";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    
+}

@@ -6,36 +6,184 @@
 @import "2display";
 @import "3pad";
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-h1, p, button{
-    font-family: 'Spartan', sans-serif;
-    font-weight: 700;
-
+h1,
+p,
+button {
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
 }
 
-.bgHelper{
-    width: 100%;
-    padding: 0 2rem;
+.bgHelper {
+  width: 100%;
+  padding: 0 2rem;
 }
 
-body{
-    
-    display: grid;
-    place-items: center;
-    width: 100vw;
-    height: 100vh;
+body {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.2s ease-in-out;
 
-    
-    background-color: $mainBg;
-    
-    
+  &.theme1 {
+    background-color: $mainBgTh1;
 
-    
+    header {
+      h1 {
+        color: $textColorMainTh1;
+      }
+
+      p {
+        color: $textColorMainTh1;
+      }
+
+      input {
+        background-color: $toggleBgTh1;
+
+        &::-webkit-slider-thumb,
+        &::-moz-range-thumb {
+          background-color: $keyCalcBgTh1;
+        }
+      }
+    }
+
+    #display {
+      background-color: $screenBgTh1;
+      h1 {
+        color: $textColorMainTh1;
+      }
+    }
+
+    #pad{
+      background-color: $toggleBgTh1;
+    }
+
+    .btn_mainPad {
+      background-color: $keyPadBgTh1;
+      box-shadow: 0px 4px 0px 0px $keyPadShadowTh1;
+      color: $textColorPadTh1;
+    }
+  
+    .btn_funct {
+      background-color: $keyFunctBgTh1;
+      box-shadow: 0px 4px 0px 0px $keyFunctShadowTh1;
+      color: $textColorMainTh1;
+    }
+  
+    .btn_calc {
+      background-color: $keyCalcBgTh1;
+      box-shadow: 0px 4px 0px 0px $keyCalcShadowTh1;
+      color: $textColorMainTh1;
+    }
+  }
+
+  &.theme2 {
+    background-color: $mainBgTh2;
+
+    header {
+      h1 {
+        color: $textColorMainTh2;
+      }
+
+      p {
+        color: $textColorMainTh2;
+      }
+
+      input {
+        background-color: $toggleBgTh2;
+
+        &::-webkit-slider-thumb,
+        &::-moz-range-thumb {
+          background-color: $keyCalcBgTh2;
+        }
+      }
+    }
+
+    #display {
+      background-color: $screenBgTh2;
+      h1 {
+        color: $textColorMainTh2;
+      }
+    }
+
+    #pad{
+      background-color: $toggleBgTh2;
+    }
+
+    .btn_mainPad {
+      background-color: $keyPadBgTh2;
+      box-shadow: 0px 4px 0px 0px $keyPadShadowTh2;
+      color: $textColorMainTh2;
+    }
+  
+    .btn_funct {
+      background-color: $keyFunctBgTh2;
+      box-shadow: 0px 4px 0px 0px $keyFunctShadowTh2;
+      color: $textColorFunctCalcTh2;
+    }
+  
+    .btn_calc {
+      background-color: $keyCalcBgTh2;
+      box-shadow: 0px 4px 0px 0px $keyCalcShadowTh2;
+      color: $textColorFunctCalcTh2;
+    }
+  }
+
+  &.theme3 {
+    background-color: $mainBgTh3;
+
+    header {
+      h1 {
+        color: $textColorMainTh3;
+      }
+
+      p {
+        color: $textColorMainTh3;
+      }
+
+      input {
+        background-color: $screenBgTh3;
+
+        &::-webkit-slider-thumb,
+        &::-moz-range-thumb {
+          background-color: $keyCalcBgTh3;
+        }
+      }
+    }
+
+    #display {
+      background-color: $screenBgTh3;
+      h1 {
+        color: $textColorMainTh3;
+      }
+    }
+
+    #pad{
+      background-color: $screenBgTh3;
+    }
+
+    .btn_mainPad {
+      background-color: $keyPadBgTh3;
+      box-shadow: 0px 4px 0px 0px $keyPadShadowTh3;
+      color: $textColorMainTh3;
+    }
+  
+    .btn_funct {
+      background-color: $keyFunctBgTh3;
+      box-shadow: 0px 4px 0px 0px $keyFunctShadowTh3;
+      color: $textColorFuncTh3;
+    }
+  
+    .btn_calc {
+      background-color: $keyCalcBgTh3;
+      box-shadow: 0px 4px 0px 0px $keyCalcShadowTh3;
+      color: $textColorCalcTh3;
+    }
+  }
 }

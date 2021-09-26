@@ -1,61 +1,59 @@
+$value: 2;
+
 // Theme 1
 
 //Backgrounds
 
-$veryDarkDesaturatedBlueMain: hsl(222, 26%, 31%); // (mainBackground)
-$veryDarkDesaturatedBlue: hsl(
-  223,
-  31%,
-  20%
-); //(toggleBackground, keypadBackground)
-$veryDarkDesaturatedBlueScreen: hsl(224, 36%, 15%); //(screenBackground)
+$mainBgTh1: hsl(222, 26%, 31%); // (mainBackground)
+$toggleBgTh1: hsl(223, 31%, 20%); //(toggleBackground, keypadBackground)
+$screenBgTh1: hsl(224, 36%, 15%); //(screenBackground)
 
 // Keys
 
-$desaturatedDarkBlueBG: hsl(225, 21%, 49%); //(keyBackground)
-$desaturatedDarkBlue: hsl(224, 28%, 35%); //(key shadow)
+$keyFunctBgTh1: hsl(225, 21%, 49%); //(keyBackground)
+$keyFunctShadowTh1: hsl(224, 28%, 35%); //(key shadow)
 
-$Red: hsl(6, 63%, 50%); //(keyBackground, toggle)
-$darkRed: hsl(6, 70%, 34%); //(key shadow)
+$keyCalcBgTh1: hsl(6, 63%, 50%); //(keyBackground, toggle)
+$keyCalcShadowTh1: hsl(6, 70%, 34%); //(key shadow)
 
-$lightGrayishOrange: hsl(30, 25%, 89%); //(keyBackground)
-$grayishOrange: hsl(28, 16%, 65%); //(key shadow)
+$keyPadBgTh1: hsl(30, 25%, 89%); //(keyBackground)
+$keyPadShadowTh1: hsl(28, 16%, 65%); //(key shadow)
 
 // Text
 
-$veryDarkGrayishBlue: hsl(221, 14%, 31%); //
-$white: hsl(0, 0, 100%); //
+$textColorPadTh1: hsl(221, 14%, 31%); //
+$textColorMainTh1: hsl(0, 0, 100%); //
 
 // Theme 2
 
 //Backgrounds
 
-$lightGray: hsl(0, 0%, 90%); // (mainBackground)
-$grayishRed: hsl(0, 5%, 81%); //(toggleBackground, keypadBackground)
-$veryLightGray: hsl(0, 0%, 93%); // (screenBackground)
+$mainBgTh2: hsl(0, 0%, 90%); // (mainBackground)
+$toggleBgTh2: hsl(0, 5%, 81%); //(toggleBackground, keypadBackground)
+$screenBgTh2: hsl(0, 0%, 93%); // (screenBackground)
 
 // Keys
 
-$darkModerateCyan: hsl(185, 42%, 37%); //(keyBackground)
-$veryDarkCyan: hsl(185, 58%, 25%); //(key shadow)
+$keyFunctBgTh2: hsl(185, 42%, 37%); //(keyBackground)
+$keyFunctShadowTh2: hsl(185, 58%, 25%); //(key shadow)
 
-$orange: hsl(25, 98%, 40%); //(keyBackground, toggle)
-$darkOrange: hsl(25, 99%, 27%); //(key shadow)
+$keyCalcBgTh2: hsl(25, 98%, 40%); //(keyBackground, toggle)
+$keyCalcShadowTh2: hsl(25, 99%, 27%); //(key shadow)
 
-$lightGrayishYellow: hsl(45, 7%, 89%); //(keyBackground)
-$darkGrayishOrange: hsl(35, 11%, 61%); // (key shadow)
+$keyPadBgTh2: hsl(45, 7%, 89%); //(keyBackground)
+$keyPadShadowTh2: hsl(35, 11%, 61%); // (key shadow)
 
 // Text
 
-$veryDarkGrayishYellow: hsl(60, 10%, 19%); //
-$white: hsl(0, 0, 100%); //(text)
+$textColorMainTh2: hsl(60, 10%, 19%); //
+$textColorFunctCalcTh2: hsl(0, 0, 100%); //(text)
 
-// Theme 3
+//Theme 3
 
 //Backgrounds
 
-$veryDarkVioletMain: hsl(268, 75%, 9%); // (mainBackground)
-$veryDarkViolet: hsl(
+$mainBgTh3: hsl(268, 75%, 9%); // (mainBackground)
+$screenBgTh3: hsl(
   268,
   71%,
   12%
@@ -63,16 +61,17 @@ $veryDarkViolet: hsl(
 
 // Keys
 
-$darkViolet: hsl(281, 89%, 26%); //(keyBackground)
-$vividMagenta: hsl(285, 91%, 52%); //(key shadow)
+$keyFunctBgTh3: hsl(281, 89%, 26%); //(keyBackground)
+$keyFunctShadowTh3: hsl(285, 91%, 52%); //(key shadow)
 
-$pureCyan: hsl(176, 100%, 44%); //(keyBackground, toggle
-$softCyan: hsl(177, 92%, 70%); //(key shadow)
+$keyCalcBgTh3: hsl(176, 100%, 44%); //(keyBackground, toggle
+$keyCalcShadowTh3: hsl(177, 92%, 70%); //(key shadow)
 
-$veryDarkViolet: hsl(268, 47%, 21%); //(keyBackground)
-$darkMagenta: hsl(290, 70%, 36%); //(key shadow)
+$keyPadBgTh3: hsl(268, 47%, 21%); //(keyBackground)
+$keyPadShadowTh3: hsl(290, 70%, 36%); //(key shadow)
 
 // Text
 
-$lightYellow: hsl(52, 100%, 62%); //
-$veryDarkBlue: hsl(198, 20%, 13%); //
+$textColorMainTh3: hsl(52, 100%, 62%); //
+$textColorCalcTh3: hsl(198, 20%, 13%); //
+$textColorFuncTh3: hsl(0, 0, 100%); //(text)

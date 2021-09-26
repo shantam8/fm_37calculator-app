@@ -1,7 +1,6 @@
 #pad {
   margin-top: 2rem;
 
-  background-color: $toggleBg;
   padding: 1.5rem;
   border-radius: 10px;
 
@@ -22,32 +21,29 @@
     border-radius: 10px;
     border: none;
     font-size: 1.5rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover, &.focus{
+      cursor: pointer;
+transform: scale(1.05);    }
+
+    &:active{
+      box-shadow: none;
+      margin-top: 4px;
+    }
     
   }
 
-  .btn_mainPad {
-    background-color: $keyPadBg;
-    box-shadow: 0px 4px 0px 0px $keyPadShadow;
-    color: $textColorPad;
-  }
 
   .btn_funct {
-    background-color: $keyFunctBg;
-    box-shadow: 0px 4px 0px 0px $keyFunctShadow;
-    color: $textColorMain;
+ 
     font-size: 1rem;
     text-transform: uppercase;
-
-
   }
 
   .btn_calc {
-    background-color: $keyCalcBg;
-    box-shadow: 0px 4px 0px 0px $keyCalcShadow;
-    color: $textColorMain;
+
     font-size: 1rem;
-
-
   }
 
   #btn_reset,

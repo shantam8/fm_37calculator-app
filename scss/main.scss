@@ -1,6 +1,5 @@
 @import "colors";
 @import "fonts";
-@import "mixins";
 
 @import "1header";
 @import "2display";
@@ -21,14 +20,15 @@ button {
 
 .bgHelper {
   width: 100%;
+  max-width: 35rem;
   padding: 0 2rem;
 }
 
 body {
-  display: grid;
-  place-items: center;
   width: 100vw;
   height: 100vh;
+  display: grid;
+  place-items: center;
   transition: all 0.2s ease-in-out;
 
   &.theme1 {
@@ -55,12 +55,13 @@ body {
 
     #display {
       background-color: $screenBgTh1;
+
       h1 {
         color: $textColorMainTh1;
       }
     }
 
-    #pad{
+    #pad {
       background-color: $toggleBgTh1;
     }
 
@@ -69,13 +70,13 @@ body {
       box-shadow: 0px 4px 0px 0px $keyPadShadowTh1;
       color: $textColorPadTh1;
     }
-  
+
     .btn_funct {
       background-color: $keyFunctBgTh1;
       box-shadow: 0px 4px 0px 0px $keyFunctShadowTh1;
       color: $textColorMainTh1;
     }
-  
+
     .btn_calc {
       background-color: $keyCalcBgTh1;
       box-shadow: 0px 4px 0px 0px $keyCalcShadowTh1;
@@ -112,7 +113,7 @@ body {
       }
     }
 
-    #pad{
+    #pad {
       background-color: $toggleBgTh2;
     }
 
@@ -121,13 +122,13 @@ body {
       box-shadow: 0px 4px 0px 0px $keyPadShadowTh2;
       color: $textColorMainTh2;
     }
-  
+
     .btn_funct {
       background-color: $keyFunctBgTh2;
       box-shadow: 0px 4px 0px 0px $keyFunctShadowTh2;
       color: $textColorFunctCalcTh2;
     }
-  
+
     .btn_calc {
       background-color: $keyCalcBgTh2;
       box-shadow: 0px 4px 0px 0px $keyCalcShadowTh2;
@@ -164,7 +165,7 @@ body {
       }
     }
 
-    #pad{
+    #pad {
       background-color: $screenBgTh3;
     }
 
@@ -173,13 +174,13 @@ body {
       box-shadow: 0px 4px 0px 0px $keyPadShadowTh3;
       color: $textColorMainTh3;
     }
-  
+
     .btn_funct {
       background-color: $keyFunctBgTh3;
       box-shadow: 0px 4px 0px 0px $keyFunctShadowTh3;
       color: $textColorFuncTh3;
     }
-  
+
     .btn_calc {
       background-color: $keyCalcBgTh3;
       box-shadow: 0px 4px 0px 0px $keyCalcShadowTh3;

@@ -1,7 +1,4 @@
-$value: 2;
-
 // Theme 1
-
 //Backgrounds
 
 $mainBgTh1: hsl(222, 26%, 31%); // (mainBackground)
@@ -9,7 +6,6 @@ $toggleBgTh1: hsl(223, 31%, 20%); //(toggleBackground, keypadBackground)
 $screenBgTh1: hsl(224, 36%, 15%); //(screenBackground)
 
 // Keys
-
 $keyFunctBgTh1: hsl(225, 21%, 49%); //(keyBackground)
 $keyFunctShadowTh1: hsl(224, 28%, 35%); //(key shadow)
 
@@ -20,20 +16,16 @@ $keyPadBgTh1: hsl(30, 25%, 89%); //(keyBackground)
 $keyPadShadowTh1: hsl(28, 16%, 65%); //(key shadow)
 
 // Text
-
-$textColorPadTh1: hsl(221, 14%, 31%); //
-$textColorMainTh1: hsl(0, 0, 100%); //
+$textColorPadTh1: hsl(221, 14%, 31%); 
+$textColorMainTh1: hsl(0, 0, 100%); 
 
 // Theme 2
-
 //Backgrounds
-
 $mainBgTh2: hsl(0, 0%, 90%); // (mainBackground)
 $toggleBgTh2: hsl(0, 5%, 81%); //(toggleBackground, keypadBackground)
 $screenBgTh2: hsl(0, 0%, 93%); // (screenBackground)
 
 // Keys
-
 $keyFunctBgTh2: hsl(185, 42%, 37%); //(keyBackground)
 $keyFunctShadowTh2: hsl(185, 58%, 25%); //(key shadow)
 
@@ -44,14 +36,11 @@ $keyPadBgTh2: hsl(45, 7%, 89%); //(keyBackground)
 $keyPadShadowTh2: hsl(35, 11%, 61%); // (key shadow)
 
 // Text
-
-$textColorMainTh2: hsl(60, 10%, 19%); //
+$textColorMainTh2: hsl(60, 10%, 19%); 
 $textColorFunctCalcTh2: hsl(0, 0, 100%); //(text)
 
 //Theme 3
-
 //Backgrounds
-
 $mainBgTh3: hsl(268, 75%, 9%); // (mainBackground)
 $screenBgTh3: hsl(
   268,
@@ -60,7 +49,6 @@ $screenBgTh3: hsl(
 ); //(toggleBackground, keypadBackground, screenBackground)
 
 // Keys
-
 $keyFunctBgTh3: hsl(281, 89%, 26%); //(keyBackground)
 $keyFunctShadowTh3: hsl(285, 91%, 52%); //(key shadow)
 
@@ -71,7 +59,6 @@ $keyPadBgTh3: hsl(268, 47%, 21%); //(keyBackground)
 $keyPadShadowTh3: hsl(290, 70%, 36%); //(key shadow)
 
 // Text
-
-$textColorMainTh3: hsl(52, 100%, 62%); //
-$textColorCalcTh3: hsl(198, 20%, 13%); //
+$textColorMainTh3: hsl(52, 100%, 62%); 
+$textColorCalcTh3: hsl(198, 20%, 13%); 
 $textColorFuncTh3: hsl(0, 0, 100%); //(text)

@@ -1,18 +1,15 @@
 #display {
   margin-top: 2rem;
   padding: 1.5rem;
-  text-align: right;
   border-radius: 10px;
-  
-  .display{
-    
+  text-align: right;
+
+  .display {
     display: flex;
     justify-content: space-between;
   }
 
   h1 {
     font-size: 2rem;
- 
-
   }
 }

@@ -13,6 +13,8 @@ let operand2 = "0";
 let operator = "";
 let result = "";
 let setFirstOperand = true;
+let operandHasComma = false;
+
 
 function setInitialColorTheme() {
   if (localStorage.getItem("calculatorTheme")) {
@@ -23,6 +25,7 @@ function setInitialColorTheme() {
   }
 }
 
+
 function setColorTheme(themeNr) {
   body.classList.remove("theme1");
   body.classList.remove("theme2");
@@ -32,19 +35,14 @@ function setColorTheme(themeNr) {
   body.classList.add("theme" + themeNr);
 }
 
-function calculateResult() {
-  if (operand2 == "") {
-    operand2 = "0";
-  }
 
+function calculateResult() {
   if (operator != "" && !setFirstOperand) {
     operand1 = operand1.replace(",", ".");
     operand2 = operand2.replace(",", ".");
 
     operand1 = parseFloat(operand1);
     operand2 = parseFloat(operand2);
-    console.log(operand1);
-    console.log(operand2);
 
     switch (operator) {
       case "+":
@@ -85,46 +83,53 @@ function calculateResult() {
   setStartConditions();
 }
 
+
 function setStartConditions() {
   operand1 = "0";
   operand2 = "0";
   operator = "";
   setFirstOperand = true;
+  operandHasComma = false;
   displayOperator.innerText = "";
 }
 
-function clearInput(event) {
 
+function clearInput(event) {
   if (event.target.value == "reset") {
     displayText.innerText = "0";
     setStartConditions();
   } else {
     if (setFirstOperand) {
       operand1 = operand1.slice(0, operand1.length - 1);
+      operand1 == "" ? (operand1 = "0") : "";
     } else {
       operand2 = operand2.slice(0, operand2.length - 1);
+      operand2 == "" ? (operand2 = "0") : "";
     }
     showNumberInDisplay();
   }
 }
 
+
 function handleMainPadInput(event) {
   if (!isNaN(parseInt(event.target.value))) {
     handleNextNumberInput(event.target.value);
-  } else {
-    if (event.target.value === ",") {
-      handleNextNumberInput(event.target.value);
+  } else if (event.target.value === ",") {
+    if (operandHasComma) {
+      return;
     } else {
-      setFirstOperand = false;
-      if (operand1 == "") {
-        operand1 = "0";
-      }
-      operator == "" ? showNumberInDisplay() : "";
-      operator = event.target.value;
-      showSelectedOperationInDisplay(event.target.value);
+      operandHasComma = true;
+      handleNextNumberInput(event.target.value);
     }
+  } else {
+    setFirstOperand = false;
+    operandHasComma = false;
+    operator == "" ? showNumberInDisplay() : "";
+    operator = event.target.value;
+    showSelectedOperationInDisplay(event.target.value);
   }
 }
+
 
 function handleNextNumberInput(nextDigit) {
   if (setFirstOperand) {
@@ -145,10 +150,12 @@ function handleNextNumberInput(nextDigit) {
   showNumberInDisplay();
 }
 
+
 function showSelectedOperationInDisplay(operator) {
   displayOperator.innerText = operator;
   setFirstOperand = false;
 }
+
 
 function showNumberInDisplay() {
   setFirstOperand
@@ -156,23 +163,82 @@ function showNumberInDisplay() {
     : (displayText.innerText = operand2);
 }
 
+
+function handleKeyboardInput(event) {
+  event.preventDefault();
+
+  switch (event.key) {
+    case "1":
+      document.querySelector("#btn_1").click();
+      break;
+    case "2":
+      document.querySelector("#btn_2").click();
+      break;
+    case "3":
+      document.querySelector("#btn_3").click();
+      break;
+    case "4":
+      document.querySelector("#btn_4").click();
+      break;
+    case "5":
+      document.querySelector("#btn_5").click();
+      break;
+    case "6":
+      document.querySelector("#btn_6").click();
+      break;
+    case "7":
+      document.querySelector("#btn_7").click();
+      break;
+    case "8":
+      document.querySelector("#btn_8").click();
+      break;
+    case "9":
+      document.querySelector("#btn_9").click();
+      break;
+    case "0":
+      document.querySelector("#btn_0").click();
+      break;
+    case ",":
+      document.querySelector("#btn_comma").click();
+      break;
+    case "+":
+      document.querySelector("#btn_add").click();
+      break;
+    case "-":
+      document.querySelector("#btn_subtract").click();
+      break;
+    case "*":
+      document.querySelector("#btn_multiply").click();
+      break;
+    case "/":
+      document.querySelector("#btn_divide").click();
+      break;
+    case "Enter":
+      document.querySelector("#btn_calc").click();
+      break;
+    case "Backspace":
+      document.querySelector("#btn_del").click();
+      break;
+  }
+}
+
+
 function init() {
   setInitialColorTheme();
   showNumberInDisplay();
-
   themeSelector.addEventListener("change", (event) => {
     setColorTheme(event.target.value);
   });
 
   btnCalc.addEventListener("click", calculateResult);
-
   btnsFunct.forEach((btn) => {
     btn.addEventListener("click", clearInput);
   });
-
   btnsMainPad.forEach((btn) => {
     btn.addEventListener("click", handleMainPadInput);
   });
+
+  window.addEventListener("keydown", handleKeyboardInput);
 }
 
 window.onload = init;

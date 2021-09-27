@@ -4,23 +4,36 @@
   border-radius: 10px;
 
   .gridBox {
+    width: 100%;
+    height: 21rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     justify-items: center;
     align-items: center;
     gap: 1rem;
-    width: 100%;
-    height: 333px;
+
+    @media screen and (min-width: 30rem) {
+      height: 23rem;
+    }
+
+    @media screen and (min-width: 35rem) {
+      height: 25rem;
+      gap: 1.5rem;
+    }
   }
 
   .btn {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
     border: none;
+    border-radius: 10px;
     font-size: 1.5rem;
     transition: all 0.2s ease-in-out;
+
+    @media screen and (min-width: 35rem) {
+      font-size: 2rem;
+    }
 
     &:hover,
     &.focus {
@@ -29,18 +42,26 @@
     }
 
     &:active {
-      box-shadow: none;
       margin-top: 4px;
+      box-shadow: none;
     }
   }
 
   .btn_funct {
     font-size: 1rem;
     text-transform: uppercase;
+
+    @media screen and (min-width: 35rem) {
+      font-size: 1.3rem;
+    }
   }
 
   .btn_calc {
     font-size: 1rem;
+
+    @media screen and (min-width: 35rem) {
+      font-size: 1.3rem;
+    }
   }
 
   #btn_reset,

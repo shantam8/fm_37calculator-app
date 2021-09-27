@@ -15,7 +15,6 @@ let result = "";
 let setFirstOperand = true;
 let operandHasComma = false;
 
-
 function setInitialColorTheme() {
   if (localStorage.getItem("calculatorTheme")) {
     setColorTheme(localStorage.getItem("calculatorTheme"));
@@ -25,7 +24,6 @@ function setInitialColorTheme() {
   }
 }
 
-
 function setColorTheme(themeNr) {
   body.classList.remove("theme1");
   body.classList.remove("theme2");
@@ -34,7 +32,6 @@ function setColorTheme(themeNr) {
   localStorage.setItem("calculatorTheme", themeNr);
   body.classList.add("theme" + themeNr);
 }
-
 
 function calculateResult() {
   if (operator != "" && !setFirstOperand) {
@@ -72,7 +69,7 @@ function calculateResult() {
       result = result.toString();
     }
 
-    if (result.charAt(",")) {
+    if (result.indexOf(".") != -1) {
       while (result[result.length - 1] == "0") {
         result = result.slice(0, result.length - 1);
       }
@@ -83,7 +80,6 @@ function calculateResult() {
   setStartConditions();
 }
 
-
 function setStartConditions() {
   operand1 = "0";
   operand2 = "0";
@@ -92,7 +88,6 @@ function setStartConditions() {
   operandHasComma = false;
   displayOperator.innerText = "";
 }
-
 
 function clearInput(event) {
   if (event.target.value == "reset") {
@@ -109,7 +104,6 @@ function clearInput(event) {
     showNumberInDisplay();
   }
 }
-
 
 function handleMainPadInput(event) {
   if (!isNaN(parseInt(event.target.value))) {
@@ -130,7 +124,6 @@ function handleMainPadInput(event) {
   }
 }
 
-
 function handleNextNumberInput(nextDigit) {
   if (setFirstOperand) {
     if ((operand1 == "0" && nextDigit == "0") || operand1.length >= 9) {
@@ -150,19 +143,16 @@ function handleNextNumberInput(nextDigit) {
   showNumberInDisplay();
 }
 
-
 function showSelectedOperationInDisplay(operator) {
   displayOperator.innerText = operator;
   setFirstOperand = false;
 }
-
 
 function showNumberInDisplay() {
   setFirstOperand
     ? (displayText.innerText = operand1)
     : (displayText.innerText = operand2);
 }
-
 
 function handleKeyboardInput(event) {
   event.preventDefault();
@@ -221,7 +211,6 @@ function handleKeyboardInput(event) {
       break;
   }
 }
-
 
 function init() {
   setInitialColorTheme();

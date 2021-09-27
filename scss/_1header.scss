@@ -37,10 +37,18 @@ header {
       outline: none;
       cursor: pointer;
 
-      &::-webkit-slider-thumb,
-      &::-moz-range-thumb {
+      &::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
+        width: 18px;
+        height: 18px;
+        border: none;
+        border-radius: 9px;
+      }
+
+      &::-moz-range-thumb {
+        // -webkit-appearance: none;
+        // appearance: none;
         width: 18px;
         height: 18px;
         border: none;

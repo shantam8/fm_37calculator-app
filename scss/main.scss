@@ -46,7 +46,9 @@ body {
       input {
         background-color: $toggleBgTh1;
 
-        &::-webkit-slider-thumb,
+        &::-webkit-slider-thumb{
+          background-color: $keyCalcBgTh1;
+        }
         &::-moz-range-thumb {
           background-color: $keyCalcBgTh1;
         }
@@ -99,7 +101,9 @@ body {
       input {
         background-color: $toggleBgTh2;
 
-        &::-webkit-slider-thumb,
+        &::-webkit-slider-thumb {
+          background-color: $keyCalcBgTh2;
+        }
         &::-moz-range-thumb {
           background-color: $keyCalcBgTh2;
         }
@@ -151,7 +155,9 @@ body {
       input {
         background-color: $screenBgTh3;
 
-        &::-webkit-slider-thumb,
+        &::-webkit-slider-thumb{
+          background-color: $keyCalcBgTh3;
+        }
         &::-moz-range-thumb {
           background-color: $keyCalcBgTh3;
         }

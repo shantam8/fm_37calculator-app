@@ -73,6 +73,15 @@ header .sliderContainer input::-webkit-slider-thumb, header .sliderContainer inp
   border-radius: 10px;
 }
 
+#display .display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 #display h1 {
   font-size: 2rem;
 }

@@ -3,10 +3,16 @@
   padding: 1.5rem;
   text-align: right;
   border-radius: 10px;
+  
+  .display{
+    
+    display: flex;
+    justify-content: space-between;
+  }
 
   h1 {
     font-size: 2rem;
-  }
+ 
 
-  
+  }
 }

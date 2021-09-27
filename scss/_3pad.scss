@@ -1,6 +1,5 @@
 #pad {
   margin-top: 2rem;
-
   padding: 1.5rem;
   border-radius: 10px;
 
@@ -23,26 +22,24 @@
     font-size: 1.5rem;
     transition: all 0.2s ease-in-out;
 
-    &:hover, &.focus{
+    &:hover,
+    &.focus {
       cursor: pointer;
-transform: scale(1.05);    }
+      transform: scale(1.05);
+    }
 
-    &:active{
+    &:active {
       box-shadow: none;
       margin-top: 4px;
     }
-    
   }
 
-
   .btn_funct {
- 
     font-size: 1rem;
     text-transform: uppercase;
   }
 
   .btn_calc {
-
     font-size: 1rem;
   }
 
